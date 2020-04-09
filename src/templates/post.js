@@ -8,6 +8,7 @@ import TagList from '../components/TagList'
 import PostLinks from '../components/PostLinks'
 import PostDetails from '../components/PostDetails'
 import SEO from '../components/SEO'
+import '../css/post.css'
 
 const PostTemplate = ({ data, pageContext }) => {
   const {
@@ -48,7 +49,9 @@ const PostTemplate = ({ data, pageContext }) => {
           date={publishDate}
           timeToRead={body.childMarkdownRemark.timeToRead}
         />
-        <PageBody body={body} />
+        <div className="post-body">
+          <PageBody body={body} />
+        </div>
       </Container>
       <PostLinks previous={previous} next={next} basePath={basePath} />
     </Layout>
