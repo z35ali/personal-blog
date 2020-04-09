@@ -1,6 +1,20 @@
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
 let contentfulConfig
+
 try {
-  contentfulConfig = require('./.contentful')
+  contentfulConfig = {
+    development: {
+      host: process.env.GATSBY_HOST,
+      spaceId: process.env.GATSBY_SPACE_ID,
+      accessToken: process.env.GATSBY_ACCESS_TOKEN_DEV,
+    },
+    production: {
+      spaceId: '6gt7bx62vaoi',
+      accessToken: process.env.GATSBY_ACCESS_TOKEN_PROD,
+    },
+  }
 } catch (e) {
   contentfulConfig = {
     production: {
@@ -20,7 +34,7 @@ module.exports = {
     title: "Zafar's Blog",
     description:
       'A starter template to build amazing static websites with Gatsby, Contentful and Netlify',
-    siteUrl: 'https://gcn.netlify.com',
+    siteUrl: 'https://zafar-blog.netlify.com',
     image: '/images/share.jpg',
     menuLinks: [
       {
