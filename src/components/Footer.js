@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from '@emotion/styled'
-
+import '../css/footer.css'
+import '../css/font-awesome/css/font-awesome.min.css'
 const Wrapper = styled.footer`
   display: flex;
   flex-flow: row wrap;
