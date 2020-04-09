@@ -29,10 +29,14 @@ const Item = styled.li`
   @media screen and (min-width: ${props => props.theme.responsive.small}) {
     width: auto;
   }
+  i {
+    font-size: 1.5rem !important;
+  }
   a {
     font-weight: 600;
     transition: all 0.2s;
     color: ${props => props.theme.colors.text};
+
     &:hover {
       color: ${props => props.theme.colors.highlight};
     }
