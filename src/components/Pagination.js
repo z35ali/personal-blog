@@ -16,7 +16,7 @@ const Wrapper = styled.div`
 
 const Button = styled(Link)`
   background: ${props => props.theme.colors.primary};
-  color: white;
+  color: black;
   padding: 1rem;
   border-radius: 2px;
   margin: 0 0 0 0.5rem;

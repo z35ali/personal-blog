@@ -5,7 +5,7 @@ export default {
     primary: 'white',
     secondary: '#e9e9e9',
     tertiary: '#f3f3f3',
-    highlight: '#5b8bf7',
+    highlight: '#e9e9e9',
   },
   fonts: {
     body:
