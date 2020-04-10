@@ -8,7 +8,7 @@ import SEO from '../components/SEO'
 const Contact = ({ data }) => {
   return (
     <Layout>
-      <SEO title="" description="Contact description goes here" />
+      <SEO title="Contact" description="zafar.a.ali2@gmail.com" />
       <Container>
         <PageTitle>Contact</PageTitle>
         <ContactForm />
