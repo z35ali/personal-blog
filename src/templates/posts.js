@@ -47,7 +47,6 @@ const Posts = ({ data, pageContext }) => {
         )}
       </Container>
       <Pagination context={pageContext} />
-      <AllTags />
     </Layout>
   )
 }

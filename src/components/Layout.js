@@ -4,6 +4,7 @@ import { Global } from '@emotion/core'
 import Menu from '../components/Menu'
 import Footer from '../components/Footer'
 import { globalStyles } from '../styles/globalStyles.js'
+import AllTags from './AllTags'
 
 const Root = styled.div`
   font-family: ${props => props.theme.fonts.body};
@@ -33,7 +34,14 @@ const Layout = props => {
       document.body.classList.add('user-is-tabbing')
     }
   }
-  useEffect(() => window.addEventListener('keydown', handleFirstTab), [])
+  let hideTags = false
+  useEffect(
+    () => window.addEventListener('keydown', handleFirstTab),
+    [],
+    (hideTags =
+      window.location.pathname === '/about/' ||
+      window.location.pathname === '/contact/')
+  )
   return (
     <Root className="siteRoot">
       <div className="siteContent">
@@ -45,6 +53,8 @@ const Layout = props => {
       </div>
 
       <Global styles={globalStyles} />
+      {hideTags ? null : <AllTags />}
+
       <Footer />
     </Root>
   )

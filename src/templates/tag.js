@@ -53,7 +53,6 @@ const TagTemplate = ({ data, pageContext }) => {
           </CardList>
         </Container>
         <Pagination context={pageContext} />
-        <AllTags />
       </Layout>
     </>
   )
