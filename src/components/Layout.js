@@ -36,11 +36,10 @@ const Layout = props => {
   }
   let hideTags = false
   useEffect(
-    () => window.addEventListener('keydown', handleFirstTab),
-    [],
-    (hideTags =
-      window.location.pathname === '/about/' ||
-      window.location.pathname === '/contact/')
+    () =>
+      (hideTags =
+        window.location.pathname === '/about/' ||
+        window.location.pathname === '/contact/')
   )
   return (
     <Root className="siteRoot">
