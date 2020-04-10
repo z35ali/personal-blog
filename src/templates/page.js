@@ -5,6 +5,7 @@ import Container from '../components/Container'
 import PageTitle from '../components/PageTitle'
 import PageBody from '../components/PageBody'
 import SEO from '../components/SEO'
+import AllTags from '../components/AllTags'
 
 const PageTemplate = ({ data }) => {
   const { title, metaDescription, body } = data.contentfulPage

@@ -55,7 +55,7 @@ const PostTemplate = ({ data, pageContext }) => {
         </div>
       </Container>
       <PostLinks previous={previous} next={next} basePath={basePath} />
-   
+      <AllTags />
     </Layout>
   )
 }
