@@ -20,9 +20,15 @@ const ReadingTime = styled.p`
 const PostDetails = props => {
   return (
     <Wrapper>
-      <Date>📅 {props.date}</Date>
+      <Date>
+        <i
+          className="fa fa-calendar"
+          style={{ color: '#D32500', paddingRight: '6px' }}
+        ></i>
+        {props.date}
+      </Date>
       <span>•</span>
-      <ReadingTime>{`⏱️${props.timeToRead} min read `}</ReadingTime>
+      <ReadingTime>{`⏱️ ${props.timeToRead} min read `}</ReadingTime>
     </Wrapper>
   )
 }
