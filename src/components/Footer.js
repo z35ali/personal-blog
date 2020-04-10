@@ -75,8 +75,7 @@ const Footer = () => (
         </Item>
       </List>
     </div>
-    <h1 className="copyright">Zafar Ali &copy; 2020</h1>
+    <h1 className="footer-details">Web Self Dev | Created By Zafar Ali</h1>
   </footer>
 )
-
 export default Footer

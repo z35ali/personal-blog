@@ -31,7 +31,7 @@ try {
 
 module.exports = {
   siteMetadata: {
-    title: "Zafar's Blog",
+    title: 'Web Self Dev',
     description:
       'A starter template to build amazing static websites with Gatsby, Contentful and Netlify',
     siteUrl: 'https://zafar-blog.netlify.com',
@@ -96,8 +96,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: "Zafar's Blog",
-        short_name: "Zafar's Blog",
+        name: 'Web Self Dev',
+        short_name: 'Web Self Dev',
         start_url: '/',
         background_color: '#ffffff',
         theme_color: '#ffffff',

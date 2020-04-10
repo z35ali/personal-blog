@@ -3,9 +3,9 @@ footer {
   color: white;
   text-align: center;
 }
-.copyright {
+.footer-details {
   padding-bottom: 1rem;
-  font-size: 18px;
+  font-size: 15px;
 }
 .footer-wrapper {
   width: 100%;
