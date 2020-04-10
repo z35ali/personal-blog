@@ -7,6 +7,7 @@ import Container from '../components/Container'
 import Pagination from '../components/Pagination'
 import SEO from '../components/SEO'
 import { startCase } from 'lodash'
+import AllTags from '../components/AllTags'
 
 const Posts = ({ data, pageContext }) => {
   const posts = data.allContentfulPost.edges
@@ -46,6 +47,7 @@ const Posts = ({ data, pageContext }) => {
         )}
       </Container>
       <Pagination context={pageContext} />
+      <AllTags />
     </Layout>
   )
 }

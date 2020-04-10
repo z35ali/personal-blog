@@ -4,7 +4,6 @@ import { Global } from '@emotion/core'
 import Menu from '../components/Menu'
 import Footer from '../components/Footer'
 import { globalStyles } from '../styles/globalStyles.js'
-import AllTags from './AllTags'
 
 const Root = styled.div`
   font-family: ${props => props.theme.fonts.body};
@@ -28,7 +27,6 @@ const Skip = styled.a`
     top: 0;
   }
 `
-
 const Layout = props => {
   function handleFirstTab(e) {
     if (e.keyCode === 9) {
@@ -36,7 +34,6 @@ const Layout = props => {
     }
   }
   useEffect(() => window.addEventListener('keydown', handleFirstTab), [])
-
   return (
     <Root className="siteRoot">
       <div className="siteContent">
@@ -46,12 +43,6 @@ const Layout = props => {
         <Menu />
         <div id="main">{props.children}</div>
       </div>
-      {!(
-        window.location.pathname === '/contact/' ||
-        window.location.pathname === '/about/'
-      ) ? (
-        <AllTags />
-      ) : null}
       <Footer />
       <Global styles={globalStyles} />
     </Root>
