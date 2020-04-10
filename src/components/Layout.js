@@ -36,6 +36,8 @@ const Layout = props => {
   }
   let hideTags = false
   useEffect(
+    () => window.addEventListener('keydown', handleFirstTab),
+    [],
     () =>
       (hideTags =
         window.location.pathname === '/about/' ||
