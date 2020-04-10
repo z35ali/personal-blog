@@ -7,6 +7,7 @@ const Header = styled.header`
   background: ${props => props.theme.colors.primary};
   width: 100%;
   padding: 1.5em 0;
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.05);
 `
 const Nav = styled.nav`
   width: 100%;
@@ -31,18 +32,18 @@ const Nav = styled.nav`
 
   a {
     text-decoration: none;
-    color: DarkGray;
+    color: black;
     font-weight: 600;
     transition: all 0.2s;
-    border-bottom: 2px solid ${props => props.theme.colors.text};
+
     &:hover {
-      color: white;
+      // color: ${props => props.theme.colors.highlight};
     }
   }
 `
 
 const activeLinkStyle = {
-  color: 'white',
+  textDecoration: 'underline',
 }
 
 const Menu = () => {

@@ -38,7 +38,7 @@ module.exports = {
     image: '/images/share.jpg',
     menuLinks: [
       {
-        name: 'Home',
+        name: 'Web Self Dev',
         slug: '/',
       },
       {
