@@ -28,20 +28,14 @@ const Skip = styled.a`
     top: 0;
   }
 `
-const Layout = { location , props} => {
+const Layout = props => {
   function handleFirstTab(e) {
     if (e.keyCode === 9) {
       document.body.classList.add('user-is-tabbing')
     }
   }
-  let hideTags = false
-  useEffect(
-    () => window.addEventListener('keydown', handleFirstTab),
-    [],
-    (hideTags =
-    location.pathname === '/about/' ||
-    location.pathname === '/contact/')
-  )
+
+  useEffect(() => window.addEventListener('keydown', handleFirstTab), [])
   return (
     <Root className="siteRoot">
       <div className="siteContent">
@@ -51,10 +45,11 @@ const Layout = { location , props} => {
         <Menu />
         <div id="main">{props.children}</div>
       </div>
-
       <Global styles={globalStyles} />
-      {hideTags ? null : <AllTags />}
-
+      {location.pathname === '/about/' ||
+      location.pathname === '/contact/' ? null : (
+        <AllTags />
+      )}
       <Footer />
     </Root>
   )
