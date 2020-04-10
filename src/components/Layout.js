@@ -4,6 +4,7 @@ import { Global } from '@emotion/core'
 import Menu from '../components/Menu'
 import Footer from '../components/Footer'
 import { globalStyles } from '../styles/globalStyles.js'
+import AllTags from './AllTags'
 
 const Root = styled.div`
   font-family: ${props => props.theme.fonts.body};
@@ -45,6 +46,12 @@ const Layout = props => {
         <Menu />
         <div id="main">{props.children}</div>
       </div>
+      {!(
+        window.location.pathname === '/contact/' ||
+        window.location.pathname === '/about/'
+      ) ? (
+        <AllTags />
+      ) : null}
       <Footer />
       <Global styles={globalStyles} />
     </Root>

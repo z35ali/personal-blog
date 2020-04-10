@@ -30,16 +30,18 @@ const Item = styled.li`
     width: auto;
   }
   i {
+    transition: all 0.2s;
     font-size: 1.5rem !important;
+    &:hover {
+      color: ${props => props.theme.colors.highlight};
+      transform: scale(1.2);
+    }
   }
   a {
     font-weight: 600;
-    transition: all 0.2s;
+
     color: ${props => props.theme.colors.text};
 
-    &:hover {
-      color: ${props => props.theme.colors.highlight};
-    }
     &:visited {
       color: ${props => props.theme.colors.text};
     }

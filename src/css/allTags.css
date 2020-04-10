@@ -1,0 +1,29 @@
+.tagsContainer {
+  display: flex;
+  margin: 0 auto auto;
+  max-width: 1050px;
+  padding: 0 1.5em 2em;
+  -webkit-box-flex: 1;
+  flex-shrink: 0;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.tagsContainer a {
+  text-decoration: none;
+  width: 105px;
+  height: 30px;
+  background: rgb(50, 50, 50);
+  padding: 7px;
+  margin: 7px;
+  text-align: center;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+
+  transition: all 0.2s;
+}
+
+.tagsContainer a:hover {
+  transform: scale(1.1);
+}

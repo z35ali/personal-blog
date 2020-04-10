@@ -5,6 +5,7 @@ const List = styled.ul`
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
+  overflow-wrap: break-word;
   margin: 0 auto;
   &::after {
     content: '';
