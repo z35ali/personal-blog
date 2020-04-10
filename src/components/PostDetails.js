@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from '@emotion/styled'
-
+import { FaCalendarDay } from 'react-icons/fa'
 const Wrapper = styled.div`
   margin: 0 auto 2em;
   max-width: ${props => props.theme.sizes.maxWidthCentered};
@@ -21,10 +21,7 @@ const PostDetails = props => {
   return (
     <Wrapper>
       <Date>
-        <i
-          className="fa fa-calendar"
-          style={{ color: '#D32500', paddingRight: '6px' }}
-        ></i>
+        <FaCalendarDay style={{ marginRight: '6px' }} />
         {props.date}
       </Date>
       <span>•</span>

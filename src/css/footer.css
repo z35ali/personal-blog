@@ -1,3 +1,12 @@
+footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+.copyright {
+  padding-bottom: 1rem;
+  font-size: 18px;
+}
 .footer-wrapper {
   width: 100%;
   display: -webkit-box;
@@ -18,4 +27,5 @@
   margin: 0 auto;
   max-width: 1050px;
   text-align: center;
+  padding-top: 10px;
 }
