@@ -28,7 +28,7 @@ const Skip = styled.a`
     top: 0;
   }
 `
-const Layout = props => {
+const Layout = { location , props} => {
   function handleFirstTab(e) {
     if (e.keyCode === 9) {
       document.body.classList.add('user-is-tabbing')
@@ -38,10 +38,9 @@ const Layout = props => {
   useEffect(
     () => window.addEventListener('keydown', handleFirstTab),
     [],
-    () =>
-      (hideTags =
-        window.location.pathname === '/about/' ||
-        window.location.pathname === '/contact/')
+    (hideTags =
+    location.pathname === '/about/' ||
+    location.pathname === '/contact/')
   )
   return (
     <Root className="siteRoot">
