@@ -31,14 +31,14 @@ try {
 
 module.exports = {
   siteMetadata: {
-    title: 'Web Self Dev',
+    title: 'Developing Mindset',
     description:
       'A starter template to build amazing static websites with Gatsby, Contentful and Netlify',
     siteUrl: 'https://zafar-blog.netlify.com',
     image: '/images/share.jpg',
     menuLinks: [
       {
-        name: 'Web Self Dev',
+        name: 'Developing Mindset',
         slug: '/',
       },
       {
@@ -96,8 +96,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'Web Self Dev',
-        short_name: 'Web Self Dev',
+        name: 'Developing Mindset',
+        short_name: 'Developing Mindset',
         start_url: '/',
         background_color: '#ffffff',
         theme_color: '#ffffff',
