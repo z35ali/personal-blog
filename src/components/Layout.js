@@ -42,6 +42,7 @@ const Layout = props => {
           Skip to content
         </Skip>
         <Menu />
+        <br />
         <div id="main">{props.children}</div>
       </div>
 
