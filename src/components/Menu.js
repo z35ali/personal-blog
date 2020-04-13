@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import styled from '@emotion/styled'
 import { useSiteMetadata } from '../hooks/use-site-metadata'
 import '../css/header.css'
 
@@ -13,7 +12,7 @@ const Menu = () => {
   return (
     <header className="header">
       <a href="/" className="logo">
-        Developing Mindset {'</>'}
+        {'Developing Mindset'}
       </a>
       <input className="menu-btn" type="checkbox" id="menu-btn" />
       <label className="menu-icon" htmlFor="menu-btn">
