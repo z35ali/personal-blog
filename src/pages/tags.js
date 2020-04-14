@@ -28,21 +28,17 @@ export default class AllTags extends Component {
             <SEO title="Tags" description="zafar.a.ali2@gmail.com" />
             <Container>
               <PageTitle>Tags</PageTitle>
-              <div className="allTags">
-                <ul>
-                  {data.allContentfulTag.edges.map(function(edge) {
-                    return (
-                      <li>
-                        <a
-                          key={edge.node.title}
-                          href={`/tag/${edge.node.title.toLowerCase()}`}
-                        >
-                          {edge.node.title}
-                        </a>
-                      </li>
-                    )
-                  })}
-                </ul>
+              <div className="tagsContainer">
+                {data.allContentfulTag.edges.map(function(edge) {
+                  return (
+                    <a
+                      key={edge.node.title}
+                      href={`/tag/${edge.node.title.toLowerCase()}`}
+                    >
+                      {edge.node.title}
+                    </a>
+                  )
+                })}
               </div>
             </Container>
           </Layout>
