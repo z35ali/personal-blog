@@ -9,7 +9,6 @@ import PostLinks from '../components/PostLinks'
 import PostDetails from '../components/PostDetails'
 import SEO from '../components/SEO'
 import '../css/post.css'
-import AllTags from '../components/AllTags'
 
 const PostTemplate = ({ data, pageContext }) => {
   const {
@@ -55,7 +54,6 @@ const PostTemplate = ({ data, pageContext }) => {
         </div>
       </Container>
       <PostLinks previous={previous} next={next} basePath={basePath} />
-      <AllTags />
     </Layout>
   )
 }

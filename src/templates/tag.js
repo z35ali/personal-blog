@@ -9,7 +9,6 @@ import CardList from '../components/CardList'
 import PageTitle from '../components/PageTitle'
 import Pagination from '../components/Pagination'
 import Container from '../components/Container'
-import AllTags from '../components/AllTags'
 
 const TagTemplate = ({ data, pageContext }) => {
   const posts = orderBy(
@@ -53,7 +52,6 @@ const TagTemplate = ({ data, pageContext }) => {
           </CardList>
         </Container>
         <Pagination context={pageContext} />
-        <AllTags />
       </Layout>
     </>
   )
