@@ -18,6 +18,7 @@ const PageTemplate = ({ data }) => {
             : body.childMarkdownRemark.excerpt
         }
       />
+
       <Container>
         <PageTitle>{title}</PageTitle>
         <PageBody body={body} />

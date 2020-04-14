@@ -9,11 +9,13 @@ const activeLinkStyle = {
 
 const Menu = () => {
   const { menuLinks } = useSiteMetadata()
+
   return (
     <header className="header">
       <a href="/" className="logo">
         {'Developing Mindset'}
       </a>
+
       <input className="menu-btn" type="checkbox" id="menu-btn" />
       <label className="menu-icon" htmlFor="menu-btn">
         <span className="navicon"></span>

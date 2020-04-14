@@ -8,12 +8,9 @@ a {
   color: #000;
 }
 
-/* header */
-
 .header {
   background-color: #fff;
   box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.05);
-  /* box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1); */
   position: fixed;
   width: 100%;
   z-index: 3;
@@ -31,7 +28,6 @@ a {
   display: block;
   padding: 20px 20px;
   border-right: 1px solid #f4f4f4;
-  border-left: 1px solid #f4f4f4;
   text-decoration: none;
 }
 
@@ -141,3 +137,4 @@ a {
     display: none;
   }
 }
+

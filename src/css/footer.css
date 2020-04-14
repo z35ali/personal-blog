@@ -4,9 +4,15 @@ footer {
   text-align: center;
 }
 .footer-details {
-  padding-bottom: 1rem;
+  padding: 0.5rem 0rem 1rem 0rem;
   font-size: 15px;
 }
+.siteLogo {
+  display: inline;
+  width: 40px;
+  height: 20%;
+}
+
 .footer-wrapper {
   width: 100%;
   display: -webkit-box;

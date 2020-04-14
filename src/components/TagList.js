@@ -23,6 +23,7 @@ const Tag = styled.li`
     border: 1px solid ${props => props.theme.colors.secondary};
     &:hover {
       background: ${props => props.theme.colors.secondary};
+      text-decoration: underline;
     }
   }
 `

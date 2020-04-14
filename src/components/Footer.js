@@ -2,6 +2,7 @@ import React from 'react'
 import styled from '@emotion/styled'
 import '../css/footer.css'
 import '../css/font-awesome/css/font-awesome.min.css'
+import siteLogo from '../../static/images/logo_notext.png'
 import { FaScroll } from 'react-icons/fa'
 const List = styled.ul`
   display: flex;
@@ -75,6 +76,7 @@ const Footer = () => (
         </Item>
       </List>
     </div>
+    <img src={siteLogo} className="siteLogo" />
     <h1 className="footer-details">
       Developing Mindset | Created By Zafar Ali
     </h1>
