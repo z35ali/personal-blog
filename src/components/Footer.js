@@ -2,7 +2,7 @@ import React from 'react'
 import styled from '@emotion/styled'
 import '../css/footer.css'
 import '../css/font-awesome/css/font-awesome.min.css'
-import siteLogo from '../../static/images/logo_notext.png'
+
 import { FaScroll } from 'react-icons/fa'
 const List = styled.ul`
   display: flex;
@@ -10,7 +10,7 @@ const List = styled.ul`
   justify-content: space-between;
   align-items: flex-start;
   width: 100%;
-  padding: 1em 0 2em;
+  padding: 0.5em 0 0.5em 0em;
   margin: 0 1.5em;
 `
 
@@ -76,7 +76,7 @@ const Footer = () => (
         </Item>
       </List>
     </div>
-    <img src={siteLogo} className="siteLogo" />
+
     <h1 className="footer-details">
       Developing Mindset | Created By Zafar Ali
     </h1>

@@ -37,15 +37,19 @@ a {
   background-color: #f4f4f4;
 }
 
-.header .logo {
+.logo {
   display: block;
   float: left;
   font-size: 1.5em;
   padding: 10px 20px;
-  text-decoration: none;
   padding-top: 1rem;
 }
 
+.logoText {
+  font-family: 'Crimson Text', cursive;
+  padding-left: 32px;
+  text-decoration: none;
+}
 /* menu */
 
 .header .menu {
@@ -137,4 +141,11 @@ a {
   .header .menu-icon {
     display: none;
   }
+}
+
+.logoImg {
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  top: 11px;
 }

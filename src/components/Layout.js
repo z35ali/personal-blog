@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import styled from '@emotion/styled'
 import { Global } from '@emotion/core'
-import Menu from '../components/Menu'
+import Header from './Header'
 import Footer from '../components/Footer'
 import { globalStyles } from '../styles/globalStyles.js'
 
@@ -20,7 +20,7 @@ const Layout = props => {
   return (
     <Root className="siteRoot">
       <div className="siteContent">
-        <Menu />
+        <Header />
         <br />
         <div id="main">{props.children}</div>
       </div>
