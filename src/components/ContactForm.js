@@ -83,8 +83,10 @@ const Submit = styled.input`
   color: white !important;
   cursor: pointer;
   transition: 0.2s;
+  margin-top: 1rem;
   &:hover {
     background: ${props => props.theme.colors.highlight} !important;
+    color: ${props => props.theme.colors.text} !important;
   }
 `
 
@@ -123,17 +125,18 @@ const Button = styled.div`
   border: none;
   outline: none;
   cursor: pointer;
-  color: white;
   padding: 1em;
   border-radius: 2px;
   text-decoration: none;
   transition: 0.2s;
   z-index: 99;
+  color: white;
   &:focus {
     outline: none;
   }
   &:hover {
     background: ${props => props.theme.colors.highlight};
+    color: ${props => props.theme.colors.text} !important;
   }
 `
 
