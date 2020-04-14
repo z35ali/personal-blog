@@ -97,7 +97,7 @@ export const globalStyles = css`
   /* Added to Fix Footer to bottom of viewport */
   html,
   body {
-    background: white;
+    background: black;
     height: 100%;
   }
   .siteRoot {
@@ -109,6 +109,7 @@ export const globalStyles = css`
     display: flex;
     flex-direction: column;
     flex: 1 0 auto;
+    background: white;
   }
   footer {
     width: 100%;

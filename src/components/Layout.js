@@ -9,24 +9,6 @@ const Root = styled.div`
   font-family: ${props => props.theme.fonts.body};
 `
 
-const Skip = styled.a`
-  font-family: ${props => props.theme.fonts.body};
-  padding: 0 1rem;
-  line-height: 60px;
-  background: #2867cf;
-  color: white;
-  z-index: 101;
-  position: fixed;
-  top: -100%;
-  &:hover {
-    text-decoration: underline;
-  }
-  &:focus,
-  &:active,
-  &:hover {
-    top: 0;
-  }
-`
 const Layout = props => {
   function handleFirstTab(e) {
     if (e.keyCode === 9) {
