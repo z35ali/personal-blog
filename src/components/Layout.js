@@ -38,9 +38,6 @@ const Layout = props => {
   return (
     <Root className="siteRoot">
       <div className="siteContent">
-        <Skip href="#main" id="skip-navigation">
-          Skip to content
-        </Skip>
         <Menu />
         <br />
         <div id="main">{props.children}</div>
