@@ -28,11 +28,13 @@ const Box = styled.div`
 
 const PreviousLink = styled(Link)`
   margin-right: auto;
+  color: black !important;
   order: 1;
 `
 
 const NextLink = styled(Link)`
   margin-left: auto;
+  color: black !important;
   order: 2;
 `
 
