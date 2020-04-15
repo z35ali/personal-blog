@@ -2,7 +2,7 @@ footer {
   background-color: black;
   color: white;
   text-align: center;
-  height: 175px;
+  min-height: 30px;
 }
 .footer-details {
   padding: 0.7em 0em 1.5em 0em;
