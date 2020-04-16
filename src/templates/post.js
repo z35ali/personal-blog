@@ -44,7 +44,7 @@ const PostTemplate = ({ data, pageContext }) => {
         image={ogImage}
       />
       <SearchPosts />
-      <div style={{ marginTop: '15px' }}>
+      <div style={{ marginTop: '17px' }}>
         <Hero title={title} image={heroImage} height={'50vh'} />
         <Container>
           {tags && <TagList tags={tags} basePath={basePath} />}

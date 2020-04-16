@@ -31,7 +31,7 @@ const Posts = ({ data, pageContext }) => {
     <Layout>
       <SEO title={startCase(basePath)} image={ogImage} />
       <SearchPosts />
-      <div style={{ marginTop: '-35px' }}>
+      <div style={{ marginTop: '-60px' }}>
         <Container>
           {isFirstPage ? (
             <CardList>
