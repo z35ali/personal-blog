@@ -4,6 +4,7 @@ import { useSiteMetadata } from '../hooks/use-site-metadata'
 import '../css/header.css'
 import siteLogo from '../../static/images/logo_notext.png'
 import Helmet from 'react-helmet'
+import SearchPosts from './SearchPosts'
 
 const activeLinkStyle = {
   textDecoration: 'underline',
@@ -26,6 +27,7 @@ const Header = () => {
           {'Developing Mindset'}
         </a>
       </div>
+      <SearchPosts />
 
       <input className="menu-btn" type="checkbox" id="menu-btn" />
       <label className="menu-icon" htmlFor="menu-btn">

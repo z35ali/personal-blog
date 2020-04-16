@@ -44,6 +44,7 @@ a {
   padding: 10px 20px;
   padding-top: 1rem;
   height: 58px;
+  width: 70px;
 }
 
 .logo:hover {
@@ -148,9 +149,16 @@ a {
   }
   .logo {
     height: 56px;
+    width: 265px;
+  }
+  .logoText {
+    visibility: visible !important;
   }
 }
 
+.logoText {
+  visibility: hidden;
+}
 .logoImg {
   height: 30px;
   width: 30px;

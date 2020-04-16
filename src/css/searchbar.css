@@ -1,0 +1,13 @@
+.searchBarContainer {
+  position: absolute;
+  top: 10px;
+  left: 80px;
+}
+
+@media (min-width: 48em) {
+  .searchBarContainer {
+    position: absolute;
+    top: 10px;
+    left: 275px;
+  }
+}
