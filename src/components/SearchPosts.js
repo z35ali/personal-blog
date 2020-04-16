@@ -4,6 +4,7 @@ import { navigateTo } from 'gatsby-link'
 import { StaticQuery, graphql } from 'gatsby'
 import '../css/searchbar.css'
 import Select from 'react-select'
+import { FaSearch } from 'react-icons/fa'
 const styles = {
   container: base => ({
     ...base,
@@ -13,6 +14,10 @@ const styles = {
   singleValue: base => ({
     ...base,
     padding: '20px 0px',
+  }),
+  dropdownIndicator: base => ({
+    ...base,
+    visibility: 'hidden',
   }),
 }
 export default class SearchPosts extends Component {
@@ -65,7 +70,10 @@ export default class SearchPosts extends Component {
                   onChange={this.handleChange}
                   noOptionsMessage={() => 'No Posts'}
                   styles={styles}
-                  onKeyDown={e => this.onFormSubmit(e)}
+                />
+                <FaSearch
+                  className="search-icon"
+                  onClick={e => this.onFormSubmit(e)}
                 />
               </div>
             </form>
