@@ -4,7 +4,6 @@ import { useSiteMetadata } from '../hooks/use-site-metadata'
 import '../css/header.css'
 import siteLogo from '../../static/images/logo_notext.png'
 import Helmet from 'react-helmet'
-import SearchPosts from './SearchPosts'
 
 const activeLinkStyle = {
   textDecoration: 'underline',
@@ -21,17 +20,12 @@ const Header = () => {
           rel="stylesheet"
         />
       </Helmet>
-      <div className="logo">
-        <img
-          src={siteLogo}
-          className="logoImg"
-          onClick={() => navigateTo('/')}
-        />
+      <div className="logo" onClick={() => navigateTo('/')}>
+        <img src={siteLogo} className="logoImg" />
         <a href="/" className="logoText">
           {'Developing Mindset'}
         </a>
       </div>
-      <SearchPosts />
 
       <input className="menu-btn" type="checkbox" id="menu-btn" />
       <label className="menu-icon" htmlFor="menu-btn">

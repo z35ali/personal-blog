@@ -7,6 +7,7 @@ import Container from '../components/Container'
 import Pagination from '../components/Pagination'
 import SEO from '../components/SEO'
 import { startCase } from 'lodash'
+import SearchPosts from '../components/SearchPosts'
 
 const Posts = ({ data, pageContext }) => {
   const posts = data.allContentfulPost.edges
@@ -29,22 +30,25 @@ const Posts = ({ data, pageContext }) => {
   return (
     <Layout>
       <SEO title={startCase(basePath)} image={ogImage} />
-      <Container>
-        {isFirstPage ? (
-          <CardList>
-            <Card {...featuredPost} featured basePath={basePath} />
-            {posts.slice(1).map(({ node: post }) => (
-              <Card key={post.id} {...post} basePath={basePath} />
-            ))}
-          </CardList>
-        ) : (
-          <CardList>
-            {posts.map(({ node: post }) => (
-              <Card key={post.id} {...post} basePath={basePath} />
-            ))}
-          </CardList>
-        )}
-      </Container>
+      <SearchPosts />
+      <div style={{ marginTop: '-35px' }}>
+        <Container>
+          {isFirstPage ? (
+            <CardList>
+              <Card {...featuredPost} featured basePath={basePath} />
+              {posts.slice(1).map(({ node: post }) => (
+                <Card key={post.id} {...post} basePath={basePath} />
+              ))}
+            </CardList>
+          ) : (
+            <CardList>
+              {posts.map(({ node: post }) => (
+                <Card key={post.id} {...post} basePath={basePath} />
+              ))}
+            </CardList>
+          )}
+        </Container>
+      </div>
       <Pagination context={pageContext} />
     </Layout>
   )

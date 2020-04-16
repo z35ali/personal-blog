@@ -9,7 +9,7 @@ const styles = {
   container: base => ({
     ...base,
     flex: 1,
-    width: '170px',
+    width: '300px',
   }),
   singleValue: base => ({
     ...base,
@@ -19,12 +19,18 @@ const styles = {
     ...base,
     visibility: 'hidden',
   }),
+  menu: base => ({
+    ...base,
+    zIndex: '2',
+  }),
 }
 export default class SearchPosts extends Component {
   constructor(props) {
     super(props)
     this.state = {
       searchText: '',
+      searchLabel: 'Search and Select Post...',
+      autoFill: false,
     }
   }
 
@@ -36,14 +42,25 @@ export default class SearchPosts extends Component {
     return newArray
   }
   handleChange = selectedOption => {
-    this.setState({ selectedOption }, () =>
-      this.setState({ searchText: selectedOption.value })
+    this.setState(
+      { selectedOption },
+      () => this.setState({ searchText: selectedOption.value }),
+      this.setState({ searchLabel: selectedOption.label })
     )
+    this.setState({ autoFill: true })
   }
 
-  onFormSubmit = e => {
+  handleInput = text => {
+    if (text !== '') {
+      this.setState({ autoFill: false })
+      this.setState({ searchText: '' })
+      this.setState({ searchLabel: 'Search and Select Post...' })
+    }
+  }
+
+  onFormSubmit = (e, obj) => {
     e.preventDefault()
-    navigateTo(this.state.searchText)
+    if (this.state.searchText !== '') navigateTo(this.state.searchText)
   }
   render() {
     return (
@@ -61,22 +78,31 @@ export default class SearchPosts extends Component {
           }
         `}
         render={data => (
-          <div className="searchBarContainer">
-            <form className="form-inline" onSubmit={e => this.onFormSubmit(e)}>
-              <div className="form-group ">
-                <Select
-                  options={this.parseOption(data.allContentfulPost.edges)}
-                  placeholder="Search Posts"
-                  onChange={this.handleChange}
-                  noOptionsMessage={() => 'No Posts'}
-                  styles={styles}
-                />
-                <FaSearch
-                  className="search-icon"
-                  onClick={e => this.onFormSubmit(e)}
-                />
-              </div>
-            </form>
+          <div className="searchPosts">
+            <div className="searchBarContainer">
+              <form
+                className="form-inline"
+                onSubmit={e => this.onFormSubmit(e)}
+              >
+                <div className="form-group ">
+                  <Select
+                    options={this.parseOption(data.allContentfulPost.edges)}
+                    onChange={this.handleChange}
+                    onInputChange={this.handleInput}
+                    noOptionsMessage={() => 'No Posts'}
+                    styles={styles}
+                    value={{
+                      label: this.state.searchLabel,
+                      value: this.state.searchText,
+                    }}
+                    className="searchbar"
+                  />
+                  <button type="submit">
+                    <FaSearch className="search-icon" />
+                  </button>
+                </div>
+              </form>
+            </div>
           </div>
         )}
       />

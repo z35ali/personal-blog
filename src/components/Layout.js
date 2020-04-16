@@ -21,7 +21,7 @@ const Layout = props => {
     <Root className="siteRoot">
       <div className="siteContent">
         <Header />
-        <br />
+
         <div id="main">{props.children}</div>
       </div>
 

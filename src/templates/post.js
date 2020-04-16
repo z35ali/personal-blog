@@ -9,6 +9,7 @@ import PostLinks from '../components/PostLinks'
 import PostDetails from '../components/PostDetails'
 import SEO from '../components/SEO'
 import '../css/post.css'
+import SearchPosts from '../components/SearchPosts'
 
 const PostTemplate = ({ data, pageContext }) => {
   const {
@@ -42,18 +43,22 @@ const PostTemplate = ({ data, pageContext }) => {
         }
         image={ogImage}
       />
-      <Hero title={title} image={heroImage} height={'50vh'} />
-      <Container>
-        {tags && <TagList tags={tags} basePath={basePath} />}
-        <PostDetails
-          date={publishDate}
-          timeToRead={body.childMarkdownRemark.timeToRead}
-        />
-        <div className="post-body">
-          <PageBody body={body} />
-        </div>
-      </Container>
-      <PostLinks previous={previous} next={next} basePath={basePath} />
+      <SearchPosts />
+      <div style={{ marginTop: '15px' }}>
+        <Hero title={title} image={heroImage} height={'50vh'} />
+        <Container>
+          {tags && <TagList tags={tags} basePath={basePath} />}
+          <PostDetails
+            date={publishDate}
+            timeToRead={body.childMarkdownRemark.timeToRead}
+          />
+          <div className="post-body">
+            <PageBody body={body} />
+          </div>
+        </Container>
+
+        <PostLinks previous={previous} next={next} basePath={basePath} />
+      </div>
     </Layout>
   )
 }
