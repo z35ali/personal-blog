@@ -8,7 +8,7 @@ const styles = {
   container: base => ({
     ...base,
     flex: 1,
-    width: '220px',
+    width: '170px',
   }),
   singleValue: base => ({
     ...base,
@@ -65,6 +65,7 @@ export default class SearchPosts extends Component {
                   onChange={this.handleChange}
                   noOptionsMessage={() => 'No Posts'}
                   styles={styles}
+                  onKeyDown={e => this.onFormSubmit(e)}
                 />
               </div>
             </form>
