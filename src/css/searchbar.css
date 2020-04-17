@@ -18,6 +18,7 @@
   width: 125%;
   padding: 0rem 2rem;
   width: 100%;
+  margin-bottom: 1rem;
 }
 
 @media (min-width: 48em) {
@@ -34,6 +35,9 @@
     right: 182px;
     padding: 0.3rem;
   }
+  .search-alert {
+    left: 195px !important;
+  }
 }
 
 @media (max-width: 35em) {
@@ -43,4 +47,11 @@
     right: 36px;
     padding: 0.3rem;
   }
+}
+
+.search-alert {
+  position: absolute;
+  top: 120px;
+  left: 35px;
+  color: orangered;
 }
