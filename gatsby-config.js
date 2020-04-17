@@ -61,6 +61,12 @@ module.exports = {
   plugins: [
     `gatsby-plugin-emotion`,
     'gatsby-plugin-theme-ui',
+    {
+      resolve: 'gatsby-plugin-page-transitions',
+      options: {
+        transitionTime: 500,
+      },
+    },
     'gatsby-plugin-react-helmet',
     {
       resolve: `gatsby-transformer-remark`,

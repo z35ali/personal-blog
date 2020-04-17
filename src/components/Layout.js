@@ -4,6 +4,7 @@ import { Global } from '@emotion/core'
 import Header from './Header'
 import Footer from '../components/Footer'
 import { globalStyles } from '../styles/globalStyles.js'
+import PageTransition from 'gatsby-plugin-page-transitions'
 
 const Root = styled.div`
   font-family: ${props => props.theme.fonts.body};
@@ -21,8 +22,9 @@ const Layout = props => {
     <Root className="siteRoot">
       <div className="siteContent">
         <Header />
-
-        <div id="main">{props.children}</div>
+        <PageTransition>
+          <div id="main">{props.children}</div>
+        </PageTransition>
       </div>
 
       <Global styles={globalStyles} />
