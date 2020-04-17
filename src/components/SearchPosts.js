@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 import { navigateTo } from 'gatsby-link'
-
 import { StaticQuery, graphql } from 'gatsby'
 import '../css/searchbar.css'
 import Select from 'react-select'
 import { FaSearch } from 'react-icons/fa'
+const menuPlaceholder = 'Search and Select a Post...'
 const styles = {
   container: base => ({
     ...base,
@@ -29,7 +29,7 @@ export default class SearchPosts extends Component {
     super(props)
     this.state = {
       searchText: '',
-      searchLabel: 'Search and Select Post...',
+      searchLabel: menuPlaceholder,
       autoFill: false,
     }
   }
@@ -54,7 +54,7 @@ export default class SearchPosts extends Component {
     if (text !== '') {
       this.setState({ autoFill: false })
       this.setState({ searchText: '' })
-      this.setState({ searchLabel: 'Search and Select Post...' })
+      this.setState({ searchLabel: menuPlaceholder })
     }
   }
 
