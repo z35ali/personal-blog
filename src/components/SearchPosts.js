@@ -21,6 +21,7 @@ const styles = {
   menu: base => ({
     ...base,
     zIndex: '900',
+    width: 'parent',
   }),
 }
 export default class SearchPosts extends Component {
