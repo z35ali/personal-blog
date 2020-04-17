@@ -51,7 +51,6 @@ export default class Search extends Component {
         matchedOption = matchedOption.concat(option)
       }
     })
-    console.log(matchedOption, matchCount)
     if (matchCount === 1 && matchedOption.length === 1) {
       navigateTo(matchedOption)
     } else if (matchedOption.length > 1) {
@@ -123,7 +122,7 @@ export default class Search extends Component {
               options={this.parseOption(data.allContentfulPost.edges)}
               onChange={this.handleChange}
               onInputChange={this.handleInput}
-              noOptionsMessage={() => null}
+              noOptionsMessage={() => 'No Posts'}
               styles={styles}
               value={{
                 label: this.state.searchLabel,
