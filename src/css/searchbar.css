@@ -1,7 +1,7 @@
 .search-icon {
   position: absolute;
   top: 80px;
-  left: 265px;
+  right: 20px;
   color: #1b6bbd;
   padding: 0.3rem;
   font-size: 1.8rem;
@@ -14,5 +14,31 @@
   margin-top: 75px;
   display: inline-block;
   width: 125%;
-  padding-left: 1.5rem;
+  padding: 0rem 2rem;
+  width: 100%;
+}
+
+@media (min-width: 48em) {
+  .searchbar {
+    margin-top: 75px;
+    display: inline-block;
+    width: 125%;
+    padding: 0rem 12rem;
+    width: 100%;
+  }
+  .search-icon {
+    position: absolute;
+    top: 80px;
+    right: 182px;
+    padding: 0.3rem;
+  }
+}
+
+@media (max-width: 35em) {
+  .search-icon {
+    position: absolute;
+    top: 80px;
+    right: 36px;
+    padding: 0.3rem;
+  }
 }

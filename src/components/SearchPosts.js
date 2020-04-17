@@ -9,7 +9,6 @@ const styles = {
   container: base => ({
     ...base,
     flex: 1,
-    width: '300px',
   }),
   singleValue: base => ({
     ...base,
@@ -21,7 +20,7 @@ const styles = {
   }),
   menu: base => ({
     ...base,
-    zIndex: '2',
+    zIndex: '900',
   }),
 }
 export default class SearchPosts extends Component {
