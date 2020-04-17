@@ -5,9 +5,11 @@
   color: #1b6bbd;
   padding: 0.3rem;
   font-size: 1.8rem;
+  transition: all 0.2s linear;
 }
 .search-icon:hover {
   cursor: pointer;
+  transform: scale(1.2);
 }
 
 .searchbar {
