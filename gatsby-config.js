@@ -32,8 +32,7 @@ try {
 module.exports = {
   siteMetadata: {
     title: 'Developing Mindset',
-    description:
-      'Zafar Ali's Blog created to share his ideas on self development and web development. Stay tuned for weekly posts!',
+    description:"Zafar Ali's blog created to share his ideas on self development and web development. Stay tuned for weekly posts!",
     siteUrl: 'https://zafar-blog.netlify.com',
     image: '/images/share.jpg',
     menuLinks: [
