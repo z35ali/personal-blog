@@ -34,7 +34,7 @@ module.exports = {
     title: 'Developing Mindset',
     description:"Zafar Ali's blog created to share his ideas on self development and web development. Stay tuned for weekly posts!",
     siteUrl: 'https://developingmindset.com',
-    image: '/images/share.jpg',
+    image: '/static/images/logo_notext.png',
     menuLinks: [
       {
         name: 'Developing Mindset',
