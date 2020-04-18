@@ -32,7 +32,7 @@ try {
 module.exports = {
   siteMetadata: {
     title: 'Developing Mindset',
-    description:"Zafar Ali's blog created to share his ideas on self development and web development. Stay tuned for weekly posts!",
+    description:"Zafar Ali's web and self development blog! Stay tuned for weekly posts!",
     siteUrl: 'https://developingmindset.com',
     image: '/static/images/logo_notext.png',
     menuLinks: [
