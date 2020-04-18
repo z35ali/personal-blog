@@ -33,7 +33,7 @@ module.exports = {
   siteMetadata: {
     title: 'Developing Mindset',
     description:
-      'A starter template to build amazing static websites with Gatsby, Contentful and Netlify',
+      'Zafar Ali's Blog created to share his ideas on self development and web development. Stay tuned for weekly posts!',
     siteUrl: 'https://zafar-blog.netlify.com',
     image: '/images/share.jpg',
     menuLinks: [
