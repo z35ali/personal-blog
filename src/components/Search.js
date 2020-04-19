@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { navigateTo } from 'gatsby-link'
+import { navigate } from 'gatsby-link'
 
 import Select from 'react-select'
 import { FaSearch } from 'react-icons/fa'
@@ -52,7 +52,7 @@ export default class Search extends Component {
       }
     })
     if (matchCount === 1 && matchedOption.length === 1) {
-      navigateTo(matchedOption)
+      navigate(matchedOption)
     } else if (matchedOption.length > 1) {
       this.setState({ alert: 'Please narrow your search.' })
       setTimeout(

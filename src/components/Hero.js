@@ -14,6 +14,10 @@ const BgImg = styled(Img)`
   position: absolute;
   width: 100%;
   height: 100%;
+  @media (max-width: ${props => props.theme.responsive.small}) {
+    height: 287.4px;
+  }
+
   &::before {
     content: '';
     background: rgba(0, 0, 0, 0.25);

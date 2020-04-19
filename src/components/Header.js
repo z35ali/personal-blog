@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, navigateTo } from 'gatsby'
+import { Link, navigate } from 'gatsby'
 import { useSiteMetadata } from '../hooks/use-site-metadata'
 import '../css/header.css'
 import siteLogo from '../../static/images/logo_notext.png'
@@ -20,7 +20,7 @@ const Header = () => {
           rel="stylesheet"
         />
       </Helmet>
-      <div className="logo" onClick={() => navigateTo('/')}>
+      <div className="logo" onClick={() => navigate('/')}>
         <img src={siteLogo} className="logoImg" />
         <a href="/" className="logoText">
           {'Developing Mindset'}
