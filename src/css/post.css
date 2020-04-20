@@ -3,3 +3,49 @@
   word-wrap: break-word;
   hyphens: auto;
 }
+
+.share-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.2rem;
+}
+
+.share {
+  padding-right: 30px !important;
+}
+
+.share:hover {
+  filter: brightness(0.8);
+}
+
+/* .share circle {
+  fill: rgb(59, 59, 59) !important;
+}
+
+.share circle {
+  fill: #f3f3f3 !important;
+}
+
+.share path {
+  fill: #121212 !important;
+}
+
+.share circle {
+  fill: rgb(59, 59, 59) !important;
+}
+
+.share circle {
+  fill: #f3f3f3 !important;
+}
+
+.share path {
+  fill: #121212 !important;
+} */
+
+.reddit-icon circle {
+  fill: #ff5700 !important;
+}
+
+.email-icon circle {
+  fill: #d44638 !important;
+}

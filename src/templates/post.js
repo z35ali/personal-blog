@@ -9,7 +9,20 @@ import PostDetails from '../components/PostDetails'
 import SEO from '../components/SEO'
 import '../css/post.css'
 import SearchPosts from '../components/SearchPosts'
-
+import {
+  EmailShareButton,
+  EmailIcon,
+  FacebookShareButton,
+  FacebookIcon,
+  TwitterShareButton,
+  TwitterIcon,
+  LinkedinShareButton,
+  LinkedinIcon,
+  WhatsappShareButton,
+  WhatsappIcon,
+  RedditShareButton,
+  RedditIcon,
+} from 'react-share'
 import styled from '@emotion/styled'
 
 const PostWrapper = styled.section`
@@ -57,12 +70,61 @@ const PostTemplate = ({ data, pageContext }) => {
         <Hero title={title} image={heroImage} height={'50vh'} />
         <PostWrapper>
           {tags && <TagList tags={tags} basePath={basePath} />}
+
           <PostDetails
             date={publishDate}
             timeToRead={body.childMarkdownRemark.timeToRead}
           />
           <div className="post-body">
             <PageBody body={body} />
+          </div>
+          <div className="share-container">
+            <EmailShareButton
+              url={`developingmindset.com/${location.pathname}`}
+              subject="subject"
+              body={
+                'Hey there, check out this post on developingmindset.com' +
+                <a href={location.pathname}>Link</a>
+              }
+              className="share"
+            >
+              <EmailIcon size={40} round className="email-icon" />
+            </EmailShareButton>
+            <FacebookShareButton
+              url={`developingmindset.com${location.pathname}`}
+              quote={'Check out this post on developingmindset.com!'}
+              className="share"
+            >
+              <FacebookIcon size={40} round />
+            </FacebookShareButton>
+            <TwitterShareButton
+              url={`developingmindset.com${location.pathname}`}
+              title={'Check out this post on developingmindset.com!'}
+              className="share"
+            >
+              <TwitterIcon size={40} round />
+            </TwitterShareButton>
+            <LinkedinShareButton
+              url={`developingmindset.com${location.pathname}`}
+              title={'Check out this post on developingmindset.com!'}
+              className="share"
+            >
+              <LinkedinIcon size={40} round />
+            </LinkedinShareButton>
+            <WhatsappShareButton
+              url={`developingmindset.com${location.pathname}`}
+              title={'Check out this post on developingmindset.com!'}
+              className="share"
+            >
+              <WhatsappIcon size={40} round />
+            </WhatsappShareButton>
+            <RedditShareButton
+              url={`developingmindset.com${location.pathname}`}
+              title={'Check out this post on developingmindset.com!'}
+              className="share"
+            >
+              <RedditIcon size={40} round className="reddit-icon" />
+            </RedditShareButton>
           </div>
         </PostWrapper>
 
