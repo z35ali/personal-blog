@@ -11,7 +11,7 @@ try {
       accessToken: process.env.GATSBY_ACCESS_TOKEN_DEV,
     },
     production: {
-      spaceId: '6gt7bx62vaoi',
+      spaceId: process.env.GATSBY_PROD_SPACE_ID,
       accessToken: process.env.GATSBY_ACCESS_TOKEN_PROD,
     },
   }
@@ -32,7 +32,8 @@ try {
 module.exports = {
   siteMetadata: {
     title: 'Developing Mindset',
-    description:"Zafar Ali's web and self development blog! Stay tuned for weekly posts!",
+    description:
+      "Welcome to Zafar Ali's web and self development blog! Stay tuned for posts that will help you become the best version of yourself!",
     siteUrl: 'https://developingmindset.com',
     image: '/static/images/logo_notext.png',
     menuLinks: [
