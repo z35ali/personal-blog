@@ -8,7 +8,6 @@ import PostLinks from '../components/PostLinks'
 import PostDetails from '../components/PostDetails'
 import SEO from '../components/SEO'
 import '../css/post.css'
-import { Location } from '@reach/router'
 import SearchPosts from '../components/SearchPosts'
 import {
   EmailShareButton,
@@ -47,6 +46,7 @@ const PostTemplate = ({ data, pageContext, location }) => {
   const previous = pageContext.prev
   const next = pageContext.next
   const { basePath } = pageContext
+  const shareTitle = 'Check out this post on developingmindset.com!'
 
   let ogImage
   try {
@@ -81,43 +81,43 @@ const PostTemplate = ({ data, pageContext, location }) => {
           </div>
           <div className="share-container">
             <EmailShareButton
-              url={`developingmindset.com${location.pathname}`}
-              subject="Check out this post on developingmindset.com!"
+              url={`https://developingmindset.com${location.pathname}`}
+              subject={shareTitle}
               className="share"
             >
               <EmailIcon size={40} round className="email-icon" />
             </EmailShareButton>
             <FacebookShareButton
-              url={`developingmindset.com${location.pathname}`}
-              quote={'Check out this post on developingmindset.com!'}
+              url={`https://developingmindset.com${location.pathname}`}
+              quote={shareTitle}
               className="share"
             >
               <FacebookIcon size={40} round />
             </FacebookShareButton>
             <TwitterShareButton
-              url={`developingmindset.com${location.pathname}`}
-              title={'Check out this post on developingmindset.com!'}
+              url={`https://developingmindset.com${location.pathname}`}
+              title={shareTitle}
               className="share"
             >
               <TwitterIcon size={40} round />
             </TwitterShareButton>
             <LinkedinShareButton
-              url={`developingmindset.com${location.pathname}`}
-              title={'Check out this post on developingmindset.com!'}
+              url={`https://developingmindset.com${location.pathname}`}
+              title={shareTitle}
               className="share"
             >
               <LinkedinIcon size={40} round />
             </LinkedinShareButton>
             <WhatsappShareButton
-              url={`developingmindset.com${location.pathname}`}
-              title={'Check out this post on developingmindset.com!'}
+              url={`https://developingmindset.com${location.pathname}`}
+              title={shareTitle}
               className="share"
             >
               <WhatsappIcon size={40} round />
             </WhatsappShareButton>
             <RedditShareButton
-              url={`developingmindset.com${location.pathname}`}
-              title={'Check out this post on developingmindset.com!'}
+              url={`https://developingmindset.com${location.pathname}`}
+              title={shareTitle}
               className="share"
             >
               <RedditIcon size={40} round className="reddit-icon" />
