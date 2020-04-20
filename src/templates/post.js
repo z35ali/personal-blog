@@ -82,7 +82,7 @@ const PostTemplate = ({ data, pageContext, location }) => {
           <div className="share-container">
             <EmailShareButton
               url={`developingmindset.com${location.pathname}`}
-              subject="subject"
+              subject="Check out this post on developingmindset.com!"
               className="share"
             >
               <EmailIcon size={40} round className="email-icon" />
