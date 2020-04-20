@@ -8,6 +8,7 @@ import PostLinks from '../components/PostLinks'
 import PostDetails from '../components/PostDetails'
 import SEO from '../components/SEO'
 import '../css/post.css'
+import { Location } from '@reach/router'
 import SearchPosts from '../components/SearchPosts'
 import {
   EmailShareButton,
@@ -33,7 +34,7 @@ const PostWrapper = styled.section`
   flex-grow: 1;
 `
 
-const PostTemplate = ({ data, pageContext }) => {
+const PostTemplate = ({ data, pageContext, location }) => {
   const {
     title,
     metaDescription,
