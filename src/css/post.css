@@ -57,3 +57,11 @@
 .email-icon circle {
   fill: #d44638 !important;
 }
+
+.share-title {
+  text-align: center;
+}
+
+.share-title h1 {
+  margin-bottom: 1.5rem !important;
+}

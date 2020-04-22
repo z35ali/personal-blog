@@ -7,6 +7,7 @@ import TagList from '../components/TagList'
 import PostLinks from '../components/PostLinks'
 import PostDetails from '../components/PostDetails'
 import SEO from '../components/SEO'
+import HyvorTalk from 'hyvor-talk-react'
 import '../css/post.css'
 import SearchPosts from '../components/SearchPosts'
 import {
@@ -41,6 +42,7 @@ const PostTemplate = ({ data, pageContext, location }) => {
     body,
     publishDate,
     tags,
+    id,
   } = data.contentfulPost
 
   const previous = pageContext.prev
@@ -79,53 +81,58 @@ const PostTemplate = ({ data, pageContext, location }) => {
           <div className="post-body">
             <PageBody body={body} />
           </div>
-          <div className="share-container">
-            <EmailShareButton
-              url={`https://developingmindset.com${location.pathname}`}
-              subject={shareTitle}
-              className="share"
-            >
-              <EmailIcon size={40} round className="email-icon" />
-            </EmailShareButton>
-            <FacebookShareButton
-              url={`https://developingmindset.com${location.pathname}`}
-              quote={shareTitle}
-              className="share"
-            >
-              <FacebookIcon size={40} round />
-            </FacebookShareButton>
-            <TwitterShareButton
-              url={`https://developingmindset.com${location.pathname}`}
-              title={shareTitle}
-              className="share"
-            >
-              <TwitterIcon size={40} round />
-            </TwitterShareButton>
-            <LinkedinShareButton
-              url={`https://developingmindset.com${location.pathname}`}
-              title={shareTitle}
-              className="share"
-            >
-              <LinkedinIcon size={40} round />
-            </LinkedinShareButton>
-            <WhatsappShareButton
-              url={`https://developingmindset.com${location.pathname}`}
-              title={shareTitle}
-              className="share"
-            >
-              <WhatsappIcon size={40} round />
-            </WhatsappShareButton>
-            <RedditShareButton
-              url={`https://developingmindset.com${location.pathname}`}
-              title={shareTitle}
-              className="share"
-            >
-              <RedditIcon size={40} round className="reddit-icon" />
-            </RedditShareButton>
+          <div className="share-title">
+            <h1>Share this post!</h1>
+            <div className="share-container">
+              <EmailShareButton
+                url={`https://developingmindset.com${location.pathname}`}
+                subject={shareTitle}
+                className="share"
+              >
+                <EmailIcon size={40} round className="email-icon" />
+              </EmailShareButton>
+              <FacebookShareButton
+                url={`https://developingmindset.com${location.pathname}`}
+                quote={shareTitle}
+                className="share"
+              >
+                <FacebookIcon size={40} round />
+              </FacebookShareButton>
+              <TwitterShareButton
+                url={`https://developingmindset.com${location.pathname}`}
+                title={shareTitle}
+                className="share"
+              >
+                <TwitterIcon size={40} round />
+              </TwitterShareButton>
+              <LinkedinShareButton
+                url={`https://developingmindset.com${location.pathname}`}
+                title={shareTitle}
+                className="share"
+              >
+                <LinkedinIcon size={40} round />
+              </LinkedinShareButton>
+              <WhatsappShareButton
+                url={`https://developingmindset.com${location.pathname}`}
+                title={shareTitle}
+                className="share"
+              >
+                <WhatsappIcon size={40} round />
+              </WhatsappShareButton>
+              <RedditShareButton
+                url={`https://developingmindset.com${location.pathname}`}
+                title={shareTitle}
+                className="share"
+              >
+                <RedditIcon size={40} round className="reddit-icon" />
+              </RedditShareButton>
+            </div>
           </div>
-        </PostWrapper>
 
-        <PostLinks previous={previous} next={next} basePath={basePath} />
+          <PostLinks previous={previous} next={next} basePath={basePath} />
+
+          <HyvorTalk.Embed websiteId={process.env.GATSBY_HYVOR_ID} id={id} />
+        </PostWrapper>
       </div>
     </Layout>
   )

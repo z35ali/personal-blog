@@ -3,8 +3,8 @@ import styled from '@emotion/styled'
 import { Link } from 'gatsby'
 
 const Wrapper = styled.div`
-  margin: -2em 0 0 0;
-  padding: 0 1.5em 2em;
+  margin: 3em 0 0 0;
+  padding: 0 2em;
 `
 
 const Box = styled.div`
