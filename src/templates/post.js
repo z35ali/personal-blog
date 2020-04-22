@@ -81,7 +81,7 @@ const PostTemplate = ({ data, pageContext, location }) => {
           <div className="post-body">
             <PageBody body={body} />
           </div>
-          <div className="share-title">
+          <div className="share-post">
             <h1>Share this post!</h1>
             <div className="share-container">
               <EmailShareButton
