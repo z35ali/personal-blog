@@ -21,7 +21,7 @@ const Header = () => {
         />
       </Helmet>
       <div className="logo" onClick={() => navigate('/')}>
-        <img src={siteLogo} className="logoImg" />
+        <img src={siteLogo} className="logoImg" alt="logo" />
         <a href="/" className="logoText">
           {'Developing Mindset'}
         </a>
