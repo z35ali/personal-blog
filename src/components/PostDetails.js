@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from '@emotion/styled'
-import { FcCalendar } from 'react-icons/fc'
+import { FcCalendar, FcClock } from 'react-icons/fc'
 import '../css/postdetails.css'
 const Wrapper = styled.div`
   margin: 0 auto 2em;
@@ -10,18 +10,15 @@ const Wrapper = styled.div`
   }
 `
 
-const ReadingTime = styled.p`
-  display: inline-block;
-`
-
 const PostDetails = props => {
   return (
     <Wrapper>
       <div className="post-details">
-        <FcCalendar fontSize={'1.5rem'} />{' '}
+        <FcCalendar fontSize={'1.5rem'} />
         <p className="post-date">{props.date}</p>
         <span>•</span>
-        <ReadingTime>{`⏱️ ${props.timeToRead} min read `}</ReadingTime>
+        <FcClock fontSize={'1.5rem'} />
+        <p className="post-time-to-read">{`${props.timeToRead} min read `}</p>
       </div>
     </Wrapper>
   )

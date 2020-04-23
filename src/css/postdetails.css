@@ -3,6 +3,7 @@
   align-items: center;
 }
 
-.post-date {
+.post-date,
+.post-time-to-read {
   padding-left: 5px;
 }
