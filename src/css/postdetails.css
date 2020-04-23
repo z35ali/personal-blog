@@ -1,0 +1,8 @@
+.post-details {
+  display: flex;
+  align-items: center;
+}
+
+.post-date {
+  padding-left: 5px;
+}
