@@ -4,6 +4,10 @@
   hyphens: auto;
 }
 
+.anchor.before {
+  display: none !important;
+}
+
 .share-container {
   display: flex;
   justify-content: center;
