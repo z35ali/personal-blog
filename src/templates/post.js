@@ -46,7 +46,7 @@ const PostTemplate = ({ data, pageContext, location }) => {
   const previous = pageContext.prev
   const next = pageContext.next
   const { basePath } = pageContext
-  const shareTitle = 'Check out this post on developingmindset.com!'
+  const shareTitle = `Check out this post on ${location.origin}`
 
   let ogImage
   try {
@@ -83,42 +83,42 @@ const PostTemplate = ({ data, pageContext, location }) => {
             <h1>Share this post!</h1>
             <div className="share-container">
               <EmailShareButton
-                url={`https://developingmindset.com${location.pathname}`}
+                url={`${location.origin}/${location.pathname}`}
                 subject={shareTitle}
                 className="share"
               >
                 <EmailIcon size={40} round className="email-icon" />
               </EmailShareButton>
               <FacebookShareButton
-                url={`https://developingmindset.com${location.pathname}`}
+                url={`${location.origin}/${location.pathname}`}
                 quote={shareTitle}
                 className="share"
               >
                 <FacebookIcon size={40} round />
               </FacebookShareButton>
               <TwitterShareButton
-                url={`https://developingmindset.com${location.pathname}`}
+                url={`${location.origin}/${location.pathname}`}
                 title={shareTitle}
                 className="share"
               >
                 <TwitterIcon size={40} round />
               </TwitterShareButton>
               <LinkedinShareButton
-                url={`https://developingmindset.com${location.pathname}`}
+                url={`${location.origin}/${location.pathname}`}
                 title={shareTitle}
                 className="share"
               >
                 <LinkedinIcon size={40} round />
               </LinkedinShareButton>
               <WhatsappShareButton
-                url={`https://developingmindset.com${location.pathname}`}
+                url={`${location.origin}/${location.pathname}`}
                 title={shareTitle}
                 className="share"
               >
                 <WhatsappIcon size={40} round />
               </WhatsappShareButton>
               <RedditShareButton
-                url={`https://developingmindset.com${location.pathname}`}
+                url={`${location.origin}/${location.pathname}`}
                 title={shareTitle}
                 className="share"
               >
