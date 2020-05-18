@@ -83,42 +83,42 @@ const PostTemplate = ({ data, pageContext, location }) => {
             <h1>Share this post!</h1>
             <div className="share-container">
               <EmailShareButton
-                url={`${location.origin}/${location.pathname}`}
+                url={`${location.origin}${location.pathname}`}
                 subject={shareTitle}
                 className="share"
               >
                 <EmailIcon size={40} round className="email-icon" />
               </EmailShareButton>
               <FacebookShareButton
-                url={`${location.origin}/${location.pathname}`}
+                url={`${location.origin}${location.pathname}`}
                 quote={shareTitle}
                 className="share"
               >
                 <FacebookIcon size={40} round />
               </FacebookShareButton>
               <TwitterShareButton
-                url={`${location.origin}/${location.pathname}`}
+                url={`${location.origin}${location.pathname}`}
                 title={shareTitle}
                 className="share"
               >
                 <TwitterIcon size={40} round />
               </TwitterShareButton>
               <LinkedinShareButton
-                url={`${location.origin}/${location.pathname}`}
+                url={`${location.origin}${location.pathname}`}
                 title={shareTitle}
                 className="share"
               >
                 <LinkedinIcon size={40} round />
               </LinkedinShareButton>
               <WhatsappShareButton
-                url={`${location.origin}/${location.pathname}`}
+                url={`${location.origin}${location.pathname}`}
                 title={shareTitle}
                 className="share"
               >
                 <WhatsappIcon size={40} round />
               </WhatsappShareButton>
               <RedditShareButton
-                url={`${location.origin}/${location.pathname}`}
+                url={`${location.origin}${location.pathname}`}
                 title={shareTitle}
                 className="share"
               >
