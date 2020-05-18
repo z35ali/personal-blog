@@ -7,7 +7,6 @@ import TagList from '../components/TagList'
 import PostLinks from '../components/PostLinks'
 import PostDetails from '../components/PostDetails'
 import SEO from '../components/SEO'
-import HyvorTalk from 'hyvor-talk-react'
 import '../css/post.css'
 import SearchPosts from '../components/SearchPosts'
 import {
