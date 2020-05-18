@@ -41,8 +41,7 @@ const PostTemplate = ({ data, pageContext, location }) => {
     heroImage,
     body,
     publishDate,
-    tags,
-    id,
+    tags
   } = data.contentfulPost
 
   const previous = pageContext.prev
@@ -131,7 +130,6 @@ const PostTemplate = ({ data, pageContext, location }) => {
 
           <PostLinks previous={previous} next={next} basePath={basePath} />
 
-          <HyvorTalk.Embed websiteId={process.env.GATSBY_HYVOR_ID} id={id} />
         </PostWrapper>
       </div>
     </Layout>
