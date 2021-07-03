@@ -36,7 +36,7 @@ const Footer = () => (
       <List>
         <Item>
           <a
-            href="https://zafaraali.com/"
+            href="https://zafarali.netlify.app/"
             target="_blank"
             rel="noopener noreferrer"
             title="Portfolio"
@@ -46,7 +46,7 @@ const Footer = () => (
         </Item>
         <Item>
           <a
-            href="https://github.com/z35ali"
+            href="https://github.com/zafaraali"
             target="_blank"
             rel="noopener noreferrer"
             title="GitHub"
@@ -56,7 +56,7 @@ const Footer = () => (
         </Item>
         <Item>
           <a
-            href="https://www.linkedin.com/in/zafar-ali-a7a512128/"
+            href="https://www.linkedin.com/in/zafaraali/"
             target="_blank"
             rel="noopener noreferrer"
             title="LinkedIn"
